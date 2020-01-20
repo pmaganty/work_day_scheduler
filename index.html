@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!--injecting bootstrap css-->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+
+    <!--linking in various style sheets from tdird party-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--linking in own developed style-->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-10 col-lg-10">
+                <table> 
+                    <tr class="entry">
+                        <td class="time">9AM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><input id="save_button" type=submit value="save" style="width:100%"></td>
+                    </tr>
+                    <tr class="entry">
+                        <td class="time">10AM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><input id="save_button" type=submit value="save" style="width:100%"></td>
+                    </tr>
+                    <tr class="entry">
+                        <td class="time">11AM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
+                    </tr>
+                    <tr class="entry">
+                        <td class="time">12AM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
+                    </tr>
+                    <tr class="entry">
+                        <td class="time">1PM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
+                    </tr>
+                    <tr class="entry">
+                        <td class="time">2PM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
+                    </tr>
+                    <tr class="entry">
+                        <td class="time">3PM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
+                    </tr>
+                    <tr class="entry">
+                        <td class="time">4PM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
+                    </tr>
+                    <tr class="entry">
+                        <td class="time">5PM</td>
+                        <td class="tasks">
+                            <textarea id="user_input"></textarea>
+                        </td>
+                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!--linking in jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!--linking in own javascript-->
+    <script src="./script.js"></script>
+  </body>
+</html>
