@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     
     <!--injecting bootstrap css-->
@@ -39,70 +39,72 @@
       <!-- Timeblocks go here -->
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-10 col-lg-10">
-                <table> 
-                    <tr class="entry">
-                        <td class="time">9AM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><input id="save_button" type=submit value="save" style="width:100%"></td>
-                    </tr>
-                    <tr class="entry">
-                        <td class="time">10AM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><input id="save_button" type=submit value="save" style="width:100%"></td>
-                    </tr>
-                    <tr class="entry">
-                        <td class="time">11AM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
-                    </tr>
-                    <tr class="entry">
-                        <td class="time">12AM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
-                    </tr>
-                    <tr class="entry">
-                        <td class="time">1PM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
-                    </tr>
-                    <tr class="entry">
-                        <td class="time">2PM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
-                    </tr>
-                    <tr class="entry">
-                        <td class="time">3PM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
-                    </tr>
-                    <tr class="entry">
-                        <td class="time">4PM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
-                    </tr>
-                    <tr class="entry">
-                        <td class="time">5PM</td>
-                        <td class="tasks">
-                            <textarea id="user_input"></textarea>
-                        </td>
-                        <td><form><input id="save_button" type=submit value="save" style="width:100%"></form></td>
-                    </tr>
+                <table id="table"> 
+                    <tbody>
+                        <tr class="entry" id="9am">
+                            <td class="time">9AM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><input id="9am" class="save_button" type=button value="save" style="width:100%"></td>
+                        </tr>
+                        <tr class="entry" id="10am">
+                            <td class="time">10AM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><input id="10am" class="save_button" type=button value="save" style="width:100%"></td>
+                        </tr>
+                        <tr class="entry" id="11am">
+                            <td class="time">11AM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><form><input id="11am" class="save_button" type=button value="save" style="width:100%"></form></td>
+                        </tr>
+                        <tr class="entry" id="12pm">
+                            <td class="time">12AM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><form><input id="12pm" class="save_button" type=button value="save" style="width:100%"></form></td>
+                        </tr>
+                        <tr class="entry" id="1pm">
+                            <td class="time">1PM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><form><input id="1pm" class="save_button" type=button value="save" style="width:100%"></form></td>
+                        </tr>
+                        <tr class="entry" id="2pm">
+                            <td class="time">2PM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><form><input id="2pm" class="save_button" type=button value="save" style="width:100%"></form></td>
+                        </tr>
+                        <tr class="entry" id="3pm">
+                            <td class="time">3PM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><form><input id="3pm" class="save_button" type=button value="save" style="width:100%"></form></td>
+                        </tr>
+                        <tr class="entry" id="4pm">
+                            <td class="time">4PM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><form><input id="4pm" class="save_button" type=button value="save" style="width:100%"></form></td>
+                        </tr>
+                        <tr class="entry" id="5pm">
+                            <td class="time">5PM</td>
+                            <td class="tasks">
+                                <textarea class="user_input"></textarea>
+                            </td>
+                            <td><form><input id="5pm" class="save_button" type=button value="save" style="width:100%"></form></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -111,6 +113,9 @@
     <!--linking in jquery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!--linking in moment.js for date/time info-->
+    <script src="./moment.js"></script>
 
     <!--linking in own javascript-->
     <script src="./script.js"></script>
