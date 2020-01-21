@@ -1,55 +1,58 @@
+/*********************************************************************************************************/
+/*                                      AUTHOR: Pranitha Maganty                                         */
+/*                                          TITLE: script.js                                             */
+/*                                    PROJECT: Work Day Schedhuler                                       */
+/*********************************************************************************************************/
+
+//
+//
+
+/******************************START: VARIABLE DEFINITIONS AND INTITIALIZATIONS***************************/
 var date = moment().format('dddd, MMMM Do');
 var currentHour = moment().format('h') + moment().format('a');
-
-function appendDateToDom() {
-    $("#currentDay").text(date);
-}
-
-var num = 9;
-function showCurrentHour() {
-    console.log(currentHour); //FOR DEBUG
-}
-
-showCurrentHour();
-appendDateToDom();
-
-var count = 0;
-var currentFound = 0;
-currentHour = "2pm"; //FOR DEBUG
-$("table tbody tr").each(function () {
-    if (this.id == currentHour) {
-        //console.log("current hour"); //FOR DEBUG
-        //console.log(currentHour); //FOR DEBUG
-        //console.log($(this).find("td").eq(1)); //FOR DEBUG
-        $(this).find("td").eq(1).addClass("red");
-        currentFound = 1;
-    } else if (currentFound != 1) {
-        $(this).find("td").eq(1).addClass("grey");
-    } else {
-        $(this).find("td").eq(1).addClass("green");
-    }
-
-})
-
 var userEntry = [];
 if(!localStorage.getItem("userEntry")){
     localStorage.setItem("userEntry", JSON.stringify(userEntry));
 }
+/******************************END: VARIABLE DEFINITIONS AND INTITIALIZATIONS*****************************/
 
 
-//localStorage.setItem('userEntry', JSON.stringify(userEntry));
-$(".save_button").click(function() {
-    //console.log(this.id); //FOR DEBUG
-    var currentId = this.id;
-    var currentEntry = $("#" + currentId).find("td").eq(1).find("textarea")[0].value; 
-    //console.log(currentEntry); //FOR DEBUG
-    var currentStorage = JSON.parse(localStorage.getItem('userEntry'));
-    var userEntry = {id: currentId, entry: currentEntry};
-    //console.log(userEntry); //FOR DEBUG
-    currentStorage.push(userEntry);
-    localStorage.setItem("userEntry", JSON.stringify(currentStorage));
-});
+//
+//
+//
+//
+//
 
+
+/****************************************START: FUNCTION DEFINITIONS***************************************/
+
+//Function Description: appends current date to DOM by using moment.js API
+function appendDateToDom() {
+    $("#currentDay").text(date);
+}
+
+//Function Description: iterates through all rows. applies logic to figure out if current hour,
+//                      past hour, or future hour. current hour will get styled with red background,
+//                      past with grey, and future with green
+function colorTheRows() {
+    var count = 0;
+    var currentFound = 0;
+    //currentHour = "2pm"; //FOR DEBUG
+    $("table tbody tr").each(function () {
+        if (this.id == currentHour) {
+            $(this).find("td").eq(1).addClass("red");
+            currentFound = 1;
+        } else if (currentFound != 1) {
+            $(this).find("td").eq(1).addClass("grey");
+        } else {
+            $(this).find("td").eq(1).addClass("green");
+        }
+
+    });
+}
+
+//Function Description: iterates through array of objects containing user text entries and appends 
+//                      each text entry to appropriate text box based on id provided in object
 function appendTextFromStorageToDom() {
     var currentStorage = JSON.parse(localStorage.getItem('userEntry'));
     console.log(currentStorage); //FOR DEBUG
@@ -64,5 +67,45 @@ function appendTextFromStorageToDom() {
     }
 }
 
+/*****************************************END: FUNCTION DEFINITIONS****************************************/
+
+
+//
+//
+//
+//
+//
+
+
+/******************************************START: EVENT LISTENERS******************************************/
+
+//Event Listener Description: every time a save button is clicked, corresponding row's id and text
+//                            content inside text box is saved to object which is appended to array
+//                            inside local storage
+$(".save_button").click(function() {
+    var currentId = this.id;
+    var currentEntry = $("#" + currentId).find("td").eq(1).find("textarea")[0].value; 
+    var currentStorage = JSON.parse(localStorage.getItem('userEntry'));
+    var userEntry = {id: currentId, entry: currentEntry};
+    currentStorage.push(userEntry);
+    localStorage.setItem("userEntry", JSON.stringify(currentStorage));
+});
+/*******************************************END: EVENT LISTENERS*******************************************/
+
+
+//
+//
+//
+//
+//
+
+
+/**********************************************************************************************************/
+/*********************************************EXECUTING CODE***********************************************/
+
+appendDateToDom();
+colorTheRows();
 appendTextFromStorageToDom()
+
+/**********************************************************************************************************/
 
