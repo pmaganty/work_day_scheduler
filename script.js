@@ -1,7 +1,7 @@
 /*********************************************************************************************************/
 /*                                      AUTHOR: Pranitha Maganty                                         */
 /*                                          TITLE: script.js                                             */
-/*                                    PROJECT: Work Day Schedhuler                                       */
+/*                                    PROJECT: Work Day Scheduler                                        */
 /*********************************************************************************************************/
 
 //
@@ -37,7 +37,7 @@ function appendDateToDom() {
 function colorTheRows() {
     var count = 0;
     var currentFound = 0;
-    //currentHour = "2pm"; //FOR DEBUG
+    currentHour = "12pm"; //FOR DEBUG
     $("table tbody tr").each(function () {
         if (this.id == currentHour) {
             $(this).find("td").eq(1).addClass("red");
