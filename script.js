@@ -87,10 +87,29 @@ $(".save_button").click(function() {
     var currentEntry = $("#" + currentId).find("td").eq(1).find("textarea")[0].value; 
     var currentStorage = JSON.parse(localStorage.getItem('userEntry'));
     var userEntry = {id: currentId, entry: currentEntry};
-    currentStorage.push(userEntry);
+    if (userEntry.id == "9am") {
+        currentStorage[0] = userEntry;
+    } else if (userEntry.id == "10am") {
+        currentStorage[1] = userEntry;
+    } else if (userEntry.id == "11am") {
+        currentStorage[2] = userEntry;
+    } else if (userEntry.id =="12pm") {
+        currentStorage[3] = userEntry;
+    } else if (userEntry.id == "1pm") {
+        currentStorage[4] = userEntry;
+    } else if (userEntry.id == "2pm") {
+        currentStorage[5] = userEntry;
+    } else if (userEntry.id == "3pm") {
+        currentStorage[6] = userEntry;
+    } else if (userEntry.id == "4pm") {
+        currentStorage[7] = userEntry;
+    } else if (userEntry.id == "5pm") {
+        currentStorage[8] = userEntry;
+    }
     localStorage.setItem("userEntry", JSON.stringify(currentStorage));
 });
 /*******************************************END: EVENT LISTENERS*******************************************/
+
 
 
 //
