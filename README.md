@@ -1,5 +1,6 @@
 # PROJECT: Work Day Scheduler
 # AUTHOR: Pranitha Maganty
+# Github URL: https://pmaganty.github.io/work_day_scheduler/
 # Description:
 # This project gives a user the ability to enter in tasks for each hour of a common 9-5 work day.
 # 
